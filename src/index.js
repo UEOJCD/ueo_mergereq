@@ -31,7 +31,7 @@ function move(e) {
 const ctx = canvas.getContext("2d");
 const ctx2 = canvas2.getContext("2d");
 
-const colors = ['red', 'yellow', 'cyan', 'limegreen'];
+const colors = ['pink', 'ivory', 'aquamarine', 'limegreen'];
 const colors2 = ['lightgray', 'lightgray', 'lightgray', 'lightgray'];
 
 drawHTable(ctx,10, 10, colors, null, null,true);
