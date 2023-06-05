@@ -1,14 +1,12 @@
 const canvas = document.querySelector("canvas#c1");
 const canvas2 = document.querySelector("canvas#c2");
-//const canvas3 = document.querySelector("canvas#c3");
-//const canvas4 = document.querySelector("canvas#c4");
 
 const originX = 100;
 const originY = 100;
 
 const sqrt3 = Math.sqrt(3);
 
-const size = 30;
+const size = 25;
 
 /*
  gestion de la sélection
@@ -48,7 +46,7 @@ function drawHTable(context, w, h, colors, ii, jj, withText) {
             const x = originX + 2*size*sqrt3*j + (i%2)*sqrt3*size;
             const y = originY + i*3*size;
             const text = (withText ? `${j}:${i}` : "");
-            if (i === ii && j === jj) drawHex(context, x, y, size, 'black', text);
+            if (i === ii && j === jj) drawHex(context, x, y, size, 'gray', text);
             else drawHex(context, x, y, size, c, text);
         }
     }
@@ -59,7 +57,7 @@ function drawHTable(context, w, h, colors, ii, jj, withText) {
  */
 function drawHex(ctx, ox, oy, size, color, text) {
     ctx.fillStyle = color;
-    ctx.strokeStyle = 'black';
+    ctx.strokeStyle = 'white';
     ctx.strokeWidth = 3;
     ctx.beginPath();
     ctx.moveTo(ox + sqrt3*size, oy);
